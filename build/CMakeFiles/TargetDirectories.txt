@@ -1,0 +1,3 @@
+/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rebuild_cache.dir
+/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/edit_cache.dir
+/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rasterizer.dir
