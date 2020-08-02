@@ -4,4 +4,5 @@
 #include "tgaimage.h"
 Eigen::Vector3d barycentric(Eigen::Matrix3i vertices, Eigen::Vector3i point);
 void triangle(Eigen::Matrix3i vertices, TGAImage &image, TGAColor color);
+void triangle(Eigen::Matrix3i vertices, TGAImage &image, TGAColor color, float* zbuffer);
 #endif

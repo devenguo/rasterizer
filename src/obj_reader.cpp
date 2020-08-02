@@ -76,6 +76,14 @@ objReader::objReader(std::string filename) {
     }
     nEdges = Edge.size();
 
+    // bbox setup
+    bbox_min = Vertex.colwise().minCoeff();
+    bbox_max = Vertex.colwise().maxCoeff();
+    bbox_size = bbox_max - bbox_min;
+
+    // face normal setup
+    __update_face_normal();
+
     // std::ofstream vertex_neighbor("../output/vertex_neighbor.txt");
     // for(int i=0; i<nVertices; ++i) {
     //     vertex_neighbor << " " << i << " ";
@@ -89,4 +97,28 @@ objReader::objReader(std::string filename) {
     //     edge << " " << Edge[i][0] << " " << Edge[i][1] << " " << std::endl;
     // }
 
+}
+
+void objReader::fit_screen(double ratio, int resX, int resY) {
+    float scale = std::min(resX * 1.0 / bbox_size(0), resY * 1.0 / bbox_size(1)) * ratio;
+    Vertex = Vertex.rowwise() - bbox_min.transpose();
+    // now the left-lower bound is (0, 0, 0)
+
+    // update
+    Vertex *= scale;
+    bbox_min *= scale;
+    bbox_max *= scale;
+    bbox_size *= scale;
+    // __update_face_normal();
+}
+
+void objReader::__update_face_normal() {
+    FaceNormal.resize(nFaces, 3);
+    for(int i=0; i<nFaces; ++i) {
+        Eigen::Vector3d v0, v1, normal;
+        v0 = Vertex.row(Face(i,2)) - Vertex.row(Face(i,0));
+        v1 = Vertex.row(Face(i,1)) - Vertex.row(Face(i,0));
+        normal = v0.cross(v1).normalized();
+        for(int j=0; j<3; ++j) FaceNormal(i,j) = normal(j);
+    }
 }

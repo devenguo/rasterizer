@@ -479,6 +479,7 @@ CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o: ../external/eigen/E
 CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o: ../external/eigen/Eigen/src/plugins/ReshapedMethods.h
 CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o: ../include/examples/ex2_draw_triangles.h
 CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o: ../include/line.h
+CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o: ../include/obj_reader.h
 CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o: ../include/tgaimage.h
 CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o: ../include/triangle.h
 CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o: ../examples/ex2_draw_triangles.cpp

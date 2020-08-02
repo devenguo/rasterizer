@@ -480,6 +480,7 @@ CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o
  ../external/eigen/Eigen/src/plugins/ReshapedMethods.h
  ../include/examples/ex2_draw_triangles.h
  ../include/line.h
+ ../include/obj_reader.h
  ../include/tgaimage.h
  ../include/triangle.h
  /Users/guodewen/Desktop/rasterizer/examples/ex2_draw_triangles.cpp

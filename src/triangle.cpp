@@ -1,5 +1,6 @@
 #include "triangle.h"
 #include <iostream>
+#include <vector>
 Eigen::Vector3d barycentric(Eigen::Matrix3i vertices,
                             Eigen::Vector3i point) {
     Eigen::Vector3i AB = vertices.row(1) - vertices.row(0);
@@ -34,6 +35,34 @@ void triangle(Eigen::Matrix3i vertices, TGAImage &image, TGAColor color) {
             Eigen::Vector3d P_bc = barycentric(vertices, Eigen::Vector3i(x, y, 1.));
             if(P_bc(0)<0. || P_bc(1)<0. || P_bc(2)<0.) continue;
             image.set(x, y, color);
+            // std::cout << x << " " << y << std::endl;
+        }
+    }
+}
+
+void triangle(Eigen::Matrix3i vertices, TGAImage &image, TGAColor color, float* zbuffer) {
+    Eigen::Vector3i bbox_min = vertices.colwise().minCoeff();
+    Eigen::Vector3i bbox_max = vertices.colwise().maxCoeff();
+    // std::cout << bbox_min << "\n" << bbox_max << std::endl;
+    // clip to the screen boundary
+    int x_min = std::max(bbox_min(0),0), x_max = std::min(bbox_max(0),image.get_width()-1),
+        y_min = std::max(bbox_min(1),0), y_max = std::min(bbox_max(1),image.get_height()-1);
+    for(int x=x_min; x<x_max; ++x) {
+        for(int y=y_min; y<y_max; ++y) {
+            Eigen::Vector3d P_bc = barycentric(vertices, Eigen::Vector3i(x, y, 1.));
+            if(P_bc(0)<0. || P_bc(1)<0. || P_bc(2)<0.) continue;
+            // std::cout << P_bc(0) << " " << P_bc(1) << " " << P_bc(2) << std::endl;
+            double _Pz = 0;
+            for (int i=0; i<3; i++) {
+                _Pz += vertices(i,2)*P_bc(i);
+                // std::cout << vertices.row(i) << std::endl;
+                // std::cout << vertices(i,2) << " " << P_bc(i) << " " << _Pz << std::endl;
+            }
+            if (zbuffer[x+y*image.get_width()] < _Pz) {
+                zbuffer[x+y*image.get_width()] = _Pz;
+                image.set(x, y, color);
+            }
+            // image.set(x, y, color);
             // std::cout << x << " " << y << std::endl;
         }
     }
