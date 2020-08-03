@@ -16,6 +16,9 @@ int main(int argc, char** argv) {
     ex1.draw();
     // ex2
     draw_triangles ex2(resX, resY);
-    ex2.draw(Eigen::Vector3d(0.,0.,-1.));
+    ex2.draw(true);
+    ex2.draw(false);
+    ex2.draw(Eigen::Vector3d(0.,0.,-1.), true);
+    ex2.draw(Eigen::Vector3d(0.,0.,-1.), false);
     return 0;
 }

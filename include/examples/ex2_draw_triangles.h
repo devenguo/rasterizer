@@ -5,7 +5,7 @@ class draw_triangles {
 public:
     draw_triangles(int resX, int resY);
     int resolutionX, resolutionY;
-    void draw();
-    void draw(Eigen::Vector3d light_dir);
+    void draw(bool perspective);
+    void draw(Eigen::Vector3d light_dir, bool perspective);
 };
 #endif
