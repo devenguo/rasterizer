@@ -105,6 +105,8 @@ void objReader::fit_screen(double ratio, int resX, int resY) {
     // now the left-lower bound is (0, 0, 0)
 
     // update
+    bbox_min -= bbox_min.transpose();
+    bbox_max -= bbox_min.transpose();
     Vertex *= scale;
     bbox_min *= scale;
     bbox_max *= scale;

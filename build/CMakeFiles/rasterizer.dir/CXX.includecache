@@ -1263,6 +1263,8 @@ Eigen/Dense
 -
 tgaimage.h
 ../include/tgaimage.h
+obj_reader.h
+../include/obj_reader.h
 
 /Users/guodewen/Desktop/rasterizer/examples/ex2_draw_triangles.cpp
 examples/ex2_draw_triangles.h

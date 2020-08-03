@@ -1443,6 +1443,7 @@ CMakeFiles/rasterizer.dir/src/triangle.cpp.o
  ../external/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
  ../external/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
  ../external/eigen/Eigen/src/plugins/ReshapedMethods.h
+ ../include/obj_reader.h
  ../include/tgaimage.h
  ../include/triangle.h
  /Users/guodewen/Desktop/rasterizer/src/triangle.cpp

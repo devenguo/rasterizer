@@ -28,7 +28,7 @@ void draw_triangles::draw() {
     TGAImage frame(resolutionX, resolutionY, TGAImage::RGB);
     for(int i=0; i<obj.nFaces; ++i) {
         // Face# i
-        Eigen::Matrix3i screen_coords(3,3);
+        Eigen::Matrix3d screen_coords(3,3);
         for(int j=0; j<3; ++j) {
             // For each vertex in that face
             Eigen::Vector3d world_coords = obj.Vertex.row(obj.Face(i, j));
@@ -44,7 +44,8 @@ void draw_triangles::draw() {
 
 void draw_triangles::draw(Eigen::Vector3d light_dir) {
     objReader obj("../data/bunny.obj");
-    obj.fit_screen(0.75, resolutionX, resolutionY);
+    obj.fit_screen(0.6, resolutionX, resolutionY);
+    // std::cout << obj.bbox_min << " " << obj.bbox_max << std::endl;
     int marginX, marginY;
     marginX = (resolutionX - obj.bbox_size[0]) * 0.5;
     marginY = (resolutionY - obj.bbox_size[1]) * 0.5;
@@ -54,28 +55,36 @@ void draw_triangles::draw(Eigen::Vector3d light_dir) {
     for(int i=resolutionX*resolutionY; i--; zbuffer[i] = -std::numeric_limits<float>::max());
     for(int i=0; i<obj.nFaces; ++i) {
         // Face# i
-        Eigen::Matrix3i screen_coords(3,3);
+        Eigen::Matrix3d screen_coords(3,3);
+
+        double c = 10.0*(obj.bbox_max(2)-obj.bbox_min(2));
         for(int j=0; j<3; ++j) {
             // For each vertex in that face
             Eigen::Vector3d world_coords = obj.Vertex.row(obj.Face(i, j));
-            screen_coords(j,0) = world_coords(0) + marginX;
-            screen_coords(j,1) = world_coords(1) + marginY;
-            screen_coords(j,2) = world_coords(2);
+            double z = world_coords(2);
+            // orthographic projection
+            // screen_coords(j,0) = world_coords(0) + marginX;
+            // screen_coords(j,1) = world_coords(1) + marginY;
+            // screen_coords(j,2) = world_coords(2);
+            // perspective projection
+            screen_coords(j,0) = world_coords(0)/(1. - z/c) + marginX;
+            screen_coords(j,1) = world_coords(1)/(1. - z/c) + marginY;
+            screen_coords(j,2) = world_coords(2)/(1. - z/c);
         }
 
-        float intensity = obj.FaceNormal.row(i) * light_dir; 
-        triangle(screen_coords, frame,
-                 TGAColor(intensity*255,
-                          intensity*255,
-                          intensity*255,
-                          255),
-                 zbuffer);
+        float intensity = obj.FaceNormal.row(i) * light_dir;
         // triangle(screen_coords, frame,
-        //          TGAColor(obj.FaceNormal(i,0)*255,
-        //                   obj.FaceNormal(i,1)*255,
-        //                   obj.FaceNormal(i,2)*255,
+        //          TGAColor(intensity*255,
+        //                   intensity*255,
+        //                   intensity*255,
         //                   255),
         //          zbuffer);
+        triangle(screen_coords, frame,
+                 TGAColor((obj.FaceNormal(i,2)+1.)*.5*255,
+                          (obj.FaceNormal(i,1)+1.)*.5*255,
+                          (obj.FaceNormal(i,0)+1.)*.5*255,
+                          255),
+                 zbuffer);
     }
     frame.flip_vertically();
     frame.write_tga_file("../output/ex2_draw_triangles_w_zbuffer.tga");

@@ -1442,6 +1442,7 @@ CMakeFiles/rasterizer.dir/src/triangle.cpp.o: ../external/eigen/Eigen/src/plugin
 CMakeFiles/rasterizer.dir/src/triangle.cpp.o: ../external/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/rasterizer.dir/src/triangle.cpp.o: ../external/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 CMakeFiles/rasterizer.dir/src/triangle.cpp.o: ../external/eigen/Eigen/src/plugins/ReshapedMethods.h
+CMakeFiles/rasterizer.dir/src/triangle.cpp.o: ../include/obj_reader.h
 CMakeFiles/rasterizer.dir/src/triangle.cpp.o: ../include/tgaimage.h
 CMakeFiles/rasterizer.dir/src/triangle.cpp.o: ../include/triangle.h
 CMakeFiles/rasterizer.dir/src/triangle.cpp.o: ../src/triangle.cpp
