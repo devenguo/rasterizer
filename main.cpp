@@ -11,14 +11,19 @@
 #define resX 1000
 #define resY 1000
 int main(int argc, char** argv) {
-    // ex1
-    draw_lines ex1(resX, resY);
-    ex1.draw();
-    // ex2
+    // // ex1
+    // draw_lines ex1(resX, resY);
+    // ex1.draw();
+    // // ex2
     draw_triangles ex2(resX, resY);
-    ex2.draw(true);
-    ex2.draw(false);
-    ex2.draw(Eigen::Vector3d(0.,0.,-1.), true);
-    ex2.draw(Eigen::Vector3d(0.,0.,-1.), false);
+    // ex2.draw(true,true);
+    ex2.draw(true,false);
+    // ex2.draw(false,true);
+    // ex2.draw(false,false);
+    // ex2.draw(Eigen::Vector3d(0.,0.,-1.), true, true);
+    // ex2.draw(Eigen::Vector3d(0.,0.,-1.), true, false);
+    // ex2.draw(Eigen::Vector3d(0.,0.,-1.), false, true);
+    // ex2.draw(Eigen::Vector3d(0.,0.,-1.), false, false);
+    
     return 0;
 }

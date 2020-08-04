@@ -285,6 +285,33 @@ src/tgaimage.cpp.s:
 	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/tgaimage.cpp.s
 .PHONY : src/tgaimage.cpp.s
 
+src/transform.o: src/transform.cpp.o
+
+.PHONY : src/transform.o
+
+# target to build an object file
+src/transform.cpp.o:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/transform.cpp.o
+.PHONY : src/transform.cpp.o
+
+src/transform.i: src/transform.cpp.i
+
+.PHONY : src/transform.i
+
+# target to preprocess a source file
+src/transform.cpp.i:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/transform.cpp.i
+.PHONY : src/transform.cpp.i
+
+src/transform.s: src/transform.cpp.s
+
+.PHONY : src/transform.s
+
+# target to generate assembly for a file
+src/transform.cpp.s:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/transform.cpp.s
+.PHONY : src/transform.cpp.s
+
 src/triangle.o: src/triangle.cpp.o
 
 .PHONY : src/triangle.o
@@ -339,6 +366,9 @@ help:
 	@echo "... src/tgaimage.o"
 	@echo "... src/tgaimage.i"
 	@echo "... src/tgaimage.s"
+	@echo "... src/transform.o"
+	@echo "... src/transform.i"
+	@echo "... src/transform.s"
 	@echo "... src/triangle.o"
 	@echo "... src/triangle.i"
 	@echo "... src/triangle.s"

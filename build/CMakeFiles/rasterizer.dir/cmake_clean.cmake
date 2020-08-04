@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/rasterizer.dir/src/line.cpp.o"
   "CMakeFiles/rasterizer.dir/src/obj_reader.cpp.o"
   "CMakeFiles/rasterizer.dir/src/tgaimage.cpp.o"
+  "CMakeFiles/rasterizer.dir/src/transform.cpp.o"
   "CMakeFiles/rasterizer.dir/src/triangle.cpp.o"
   "rasterizer"
   "rasterizer.pdb"

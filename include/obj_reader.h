@@ -12,6 +12,7 @@ public:
     // Sometimes the obj is quite small or large,
     // thus I want to resize the obj in order to fit the screen
     void fit_screen(double ratio, int resX, int resY);
+    void transform(Eigen::Matrix4d T);
     Eigen::MatrixXd Vertex;
     Eigen::MatrixXi Face;
     int nVertices, nFaces, nEdges;

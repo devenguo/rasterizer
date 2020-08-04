@@ -102,15 +102,19 @@ objReader::objReader(std::string filename) {
 void objReader::fit_screen(double ratio, int resX, int resY) {
     float scale = std::min(resX * 1.0 / bbox_size(0), resY * 1.0 / bbox_size(1)) * ratio;
     Vertex = Vertex.rowwise() - bbox_min.transpose();
+    Vertex *= scale;
     // now the left-lower bound is (0, 0, 0)
 
     // update
-    bbox_min -= bbox_min.transpose();
-    bbox_max -= bbox_min.transpose();
-    Vertex *= scale;
-    bbox_min *= scale;
-    bbox_max *= scale;
-    bbox_size *= scale;
+    bbox_min = Vertex.colwise().minCoeff();
+    bbox_max = Vertex.colwise().maxCoeff();
+    bbox_size = bbox_max - bbox_min;
+    // bbox_min -= bbox_min.transpose();
+    // bbox_max -= bbox_min.transpose();
+    // Vertex *= scale;
+    // bbox_min *= scale;
+    // bbox_max *= scale;
+    // bbox_size *= scale;
     // __update_face_normal();
 }
 
@@ -123,4 +127,17 @@ void objReader::__update_face_normal() {
         normal = v0.cross(v1).normalized();
         for(int j=0; j<3; ++j) FaceNormal(i,j) = normal(j);
     }
+}
+
+void objReader::transform(Eigen::Matrix4d T) {
+    Eigen::Matrix3d rotation = T.block(0,0,3,3);
+    Eigen::Vector3d translation = T.block(0,3,3,1);
+    Vertex.rowwise() -= Eigen::RowVector3d(bbox_size*0.5+bbox_min);
+    Vertex *= rotation;
+    Vertex.rowwise() += Eigen::RowVector3d(bbox_size*0.5+bbox_min);
+    Vertex.rowwise() += Eigen::RowVector3d(translation);
+    bbox_min = Vertex.colwise().minCoeff();
+    bbox_max = Vertex.colwise().maxCoeff();
+    bbox_size = bbox_max - bbox_min;
+    __update_face_normal();
 }
