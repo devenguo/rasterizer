@@ -15,6 +15,7 @@ set(SRCS main.cpp
     ${PROJECT_SOURCE_DIR}/src/obj_reader.cpp
     ${PROJECT_SOURCE_DIR}/src/triangle.cpp
     ${PROJECT_SOURCE_DIR}/src/transform.cpp
+    ${PROJECT_SOURCE_DIR}/src/rasterizer.cpp
     ${PROJECT_SOURCE_DIR}/examples/ex1_draw_lines.cpp
     ${PROJECT_SOURCE_DIR}/examples/ex2_draw_triangles.cpp)
 add_executable(rasterizer ${SRCS})

@@ -25,7 +25,7 @@ void draw_triangles::draw(bool perspective, bool anti_aliasing) {
     // std::cout << c << std::endl << obj.bbox_max << obj.bbox_min << std::endl;
 
     Eigen::Vector3d r, t;
-    r << -25, 45, 30; t << 0, 0, 0;
+    r << -25, 45, 0; t << 0, 0, 0;
     transform T(r, t);
     obj.transform(T.transformation);
 
@@ -67,7 +67,7 @@ void draw_triangles::draw(bool perspective, bool anti_aliasing) {
                 frame_aa.set(i,j,color);
             }
         }
-        frame_aa.flip_vertically();
+        // frame_aa.flip_vertically();
     }
     if(perspective) {
         if(anti_aliasing)
@@ -125,8 +125,9 @@ void draw_triangles::draw(Eigen::Vector3d light_dir, bool perspective, bool anti
                           255),
                  zbuffer);
     }
+    frame.flip_vertically();
     TGAImage frame_aa(resolutionX/2, resolutionY/2, TGAImage::RGB);
-    if(anti_aliasing)
+    if(anti_aliasing) {
         for(int i=0; i<resolutionX/2; ++i) {
             for(int j=0; j<resolutionY/2; ++j) {
                 TGAColor color;
@@ -135,11 +136,11 @@ void draw_triangles::draw(Eigen::Vector3d light_dir, bool perspective, bool anti
                                     +frame.get(i*2, j*2+1).bgra[k]
                                     +frame.get(i*2+1, j*2).bgra[k]
                                     +frame.get(i*2+1, j*2+1).bgra[k])*.25;
-                frame_aa.set(i,j,color);
+                // frame_aa.set(i,j,color);
             }
         }
-    frame.flip_vertically();
-    frame_aa.flip_vertically();
+        // frame_aa.flip_vertically();
+    }
     if (perspective) {
         if(anti_aliasing)
             frame_aa.write_tga_file("../output/ex2_draw_triangles_intensity_perspective_aa.tga");

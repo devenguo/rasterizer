@@ -1,5 +1,5 @@
 #include <iostream>
-#include <Eigen/Dense>
+#include "Eigen/Dense"
 #include "line.h"
 // copy from the tiny renderer
 // https://github.com/ssloy/tinyrenderer/wiki/Lesson-1-Bresenham’s-Line-Drawing-Algorithm
