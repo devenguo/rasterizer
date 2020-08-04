@@ -258,6 +258,33 @@ src/obj_reader.cpp.s:
 	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/obj_reader.cpp.s
 .PHONY : src/obj_reader.cpp.s
 
+src/rasterizer.o: src/rasterizer.cpp.o
+
+.PHONY : src/rasterizer.o
+
+# target to build an object file
+src/rasterizer.cpp.o:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/rasterizer.cpp.o
+.PHONY : src/rasterizer.cpp.o
+
+src/rasterizer.i: src/rasterizer.cpp.i
+
+.PHONY : src/rasterizer.i
+
+# target to preprocess a source file
+src/rasterizer.cpp.i:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/rasterizer.cpp.i
+.PHONY : src/rasterizer.cpp.i
+
+src/rasterizer.s: src/rasterizer.cpp.s
+
+.PHONY : src/rasterizer.s
+
+# target to generate assembly for a file
+src/rasterizer.cpp.s:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/rasterizer.cpp.s
+.PHONY : src/rasterizer.cpp.s
+
 src/tgaimage.o: src/tgaimage.cpp.o
 
 .PHONY : src/tgaimage.o
@@ -363,6 +390,9 @@ help:
 	@echo "... src/obj_reader.o"
 	@echo "... src/obj_reader.i"
 	@echo "... src/obj_reader.s"
+	@echo "... src/rasterizer.o"
+	@echo "... src/rasterizer.i"
+	@echo "... src/rasterizer.s"
 	@echo "... src/tgaimage.o"
 	@echo "... src/tgaimage.i"
 	@echo "... src/tgaimage.s"

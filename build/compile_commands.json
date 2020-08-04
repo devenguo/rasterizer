@@ -31,6 +31,11 @@
 },
 {
   "directory": "/Users/guodewen/Desktop/rasterizer/build",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/rasterizer.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/rasterizer.cpp",
+  "file": "/Users/guodewen/Desktop/rasterizer/src/rasterizer.cpp"
+},
+{
+  "directory": "/Users/guodewen/Desktop/rasterizer/build",
   "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex1_draw_lines.cpp",
   "file": "/Users/guodewen/Desktop/rasterizer/examples/ex1_draw_lines.cpp"
 },
