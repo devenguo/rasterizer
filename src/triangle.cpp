@@ -69,3 +69,42 @@ void triangle(Eigen::Matrix3d vertices, TGAImage &image, TGAColor color, float* 
         }
     }
 }
+
+// per-vertex shading / phong shading
+void triangle(Eigen::Matrix3d vertices, TGAImage &image, TGAColor* vertex_color, float* zbuffer) {
+    Eigen::Vector3d bbox_min = vertices.colwise().minCoeff();
+    Eigen::Vector3d bbox_max = vertices.colwise().maxCoeff();
+    // std::cout << bbox_min << "\n" << bbox_max << std::endl;
+    // clip to the screen boundary
+    double x_min = fmax(bbox_min(0),0), x_max = fmin(bbox_max(0),image.get_width()-1),
+           y_min = fmax(bbox_min(1),0), y_max = fmin(bbox_max(1),image.get_height()-1);
+    // x, y have to be integer
+    // or double x = int(x_min); x <= int(x_max); ++x
+    for(int x=x_min; x<=x_max; ++x) {
+        for(int y=y_min; y<=y_max; ++y) {
+            Eigen::Vector3d P_bc = barycentric(vertices, Eigen::Vector3d(x, y, 1.));
+            if(P_bc(0)<0. || P_bc(1)<0. || P_bc(2)<0.) continue;
+            // std::cout << P_bc(0) << " " << P_bc(1) << " " << P_bc(2) << std::endl;
+            double _Pz = 0.;
+            for (int i=0; i<3; i++) {
+                _Pz += vertices(i,2)*P_bc(i);
+                // std::cout << vertices.row(i) << std::endl;
+                // std::cout << vertices(i,2) << " " << P_bc(i) << " " << _Pz << std::endl;
+            }
+            TGAColor color(0,0,0,255);
+            for(int i=0; i<3; ++i)
+                for(int j=0; j<3; ++j)
+                    color[i] += P_bc(j)* vertex_color[j][i];
+            
+            // color[0] = P_bc(0)* vertex_color[0][0] + P_bc(1)* vertex_color[1][0] + P_bc(2)* vertex_color[2][0];
+            // color[1] = P_bc(0)* vertex_color[0][1] + P_bc(1)* vertex_color[1][1] + P_bc(2)* vertex_color[2][1];
+            // color[2] = P_bc(0)* vertex_color[0][2] + P_bc(1)* vertex_color[1][2] + P_bc(2)* vertex_color[2][2];
+            if (zbuffer[x+y*image.get_width()] < _Pz) {
+                zbuffer[x+y*image.get_width()] = _Pz;
+                image.set(x, y, color);
+            }
+            // image.set(x, y, color);
+            // std::cout << x << " " << y << std::endl;
+        }
+    }
+}

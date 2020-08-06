@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.0)
 project(rasterizer)
-
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 find_package(Eigen3 REQUIRED)
@@ -16,6 +16,8 @@ set(SRCS main.cpp
     ${PROJECT_SOURCE_DIR}/src/triangle.cpp
     ${PROJECT_SOURCE_DIR}/src/transform.cpp
     ${PROJECT_SOURCE_DIR}/src/rasterizer.cpp
+    ${PROJECT_SOURCE_DIR}/src/shader.cpp
     ${PROJECT_SOURCE_DIR}/examples/ex1_draw_lines.cpp
-    ${PROJECT_SOURCE_DIR}/examples/ex2_draw_triangles.cpp)
+    ${PROJECT_SOURCE_DIR}/examples/ex2_draw_triangles.cpp
+    ${PROJECT_SOURCE_DIR}/examples/ex3_rasterizer.cpp)
 add_executable(rasterizer ${SRCS})

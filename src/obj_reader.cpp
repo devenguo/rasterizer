@@ -84,6 +84,25 @@ objReader::objReader(std::string filename) {
     // face normal setup
     __update_face_normal();
 
+    VertexNeighborFace.resize(nVertices);
+    for(int i=0; i<nFaces; ++i) {
+        for(int j=0; j<3; ++j)
+            VertexNeighborFace[Face(i,j)].push_back(i);
+    }
+
+    VertexNormal.resize(nVertices, 3);
+    for(int i=0; i<nVertices; ++i) {
+        VertexNormal.row(i) = Eigen::Vector3d::Zero();
+        for(int j=0; j<VertexNeighborFace[i].size(); ++j) {
+            int face_idx = VertexNeighborFace[i][j];
+            Eigen::Vector3d a = Vertex.row(Face(face_idx,1))-Vertex.row(Face(face_idx,0));
+            Eigen::Vector3d b = Vertex.row(Face(face_idx,2))-Vertex.row(Face(face_idx,0));
+            double area = a.cross(b).squaredNorm();
+            VertexNormal.row(i) += FaceNormal.row(face_idx) * area;
+        }
+    }
+    VertexNormal.rowwise().normalize();
+
     // std::ofstream vertex_neighbor("../output/vertex_neighbor.txt");
     // for(int i=0; i<nVertices; ++i) {
     //     vertex_neighbor << " " << i << " ";

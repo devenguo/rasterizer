@@ -6,10 +6,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/guodewen/Desktop/rasterizer/examples/ex1_draw_lines.cpp" "/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.o"
   "/Users/guodewen/Desktop/rasterizer/examples/ex2_draw_triangles.cpp" "/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o"
+  "/Users/guodewen/Desktop/rasterizer/examples/ex3_rasterizer.cpp" "/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o"
   "/Users/guodewen/Desktop/rasterizer/main.cpp" "/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rasterizer.dir/main.cpp.o"
   "/Users/guodewen/Desktop/rasterizer/src/line.cpp" "/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rasterizer.dir/src/line.cpp.o"
   "/Users/guodewen/Desktop/rasterizer/src/obj_reader.cpp" "/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rasterizer.dir/src/obj_reader.cpp.o"
   "/Users/guodewen/Desktop/rasterizer/src/rasterizer.cpp" "/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rasterizer.dir/src/rasterizer.cpp.o"
+  "/Users/guodewen/Desktop/rasterizer/src/shader.cpp" "/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rasterizer.dir/src/shader.cpp.o"
   "/Users/guodewen/Desktop/rasterizer/src/tgaimage.cpp" "/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rasterizer.dir/src/tgaimage.cpp.o"
   "/Users/guodewen/Desktop/rasterizer/src/transform.cpp" "/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rasterizer.dir/src/transform.cpp.o"
   "/Users/guodewen/Desktop/rasterizer/src/triangle.cpp" "/Users/guodewen/Desktop/rasterizer/build/CMakeFiles/rasterizer.dir/src/triangle.cpp.o"

@@ -16,17 +16,18 @@ public:
     Eigen::MatrixXd Vertex;
     Eigen::MatrixXi Face;
     int nVertices, nFaces, nEdges;
-    Eigen::VectorXd bbox_min;
-    Eigen::VectorXd bbox_max;
-    Eigen::VectorXd bbox_size;
+    Eigen::Vector3d bbox_min;
+    Eigen::Vector3d bbox_max;
+    Eigen::Vector3d bbox_size;
     
     std::vector< std::vector<int> > VertexNeighbor;
+    std::vector< std::vector<int> > VertexNeighborFace;
     std::vector< std::vector<int> > Edge;
 
     Eigen::MatrixXd FaceNormal;
+    Eigen::MatrixXd VertexNormal;
 
     // todo
-    Eigen::MatrixXd VertexNormal;
     std::vector< std::vector<int> > FaceNeighbor;
 };
 #endif

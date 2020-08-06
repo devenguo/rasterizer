@@ -177,6 +177,33 @@ examples/ex2_draw_triangles.cpp.s:
 	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.s
 .PHONY : examples/ex2_draw_triangles.cpp.s
 
+examples/ex3_rasterizer.o: examples/ex3_rasterizer.cpp.o
+
+.PHONY : examples/ex3_rasterizer.o
+
+# target to build an object file
+examples/ex3_rasterizer.cpp.o:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o
+.PHONY : examples/ex3_rasterizer.cpp.o
+
+examples/ex3_rasterizer.i: examples/ex3_rasterizer.cpp.i
+
+.PHONY : examples/ex3_rasterizer.i
+
+# target to preprocess a source file
+examples/ex3_rasterizer.cpp.i:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.i
+.PHONY : examples/ex3_rasterizer.cpp.i
+
+examples/ex3_rasterizer.s: examples/ex3_rasterizer.cpp.s
+
+.PHONY : examples/ex3_rasterizer.s
+
+# target to generate assembly for a file
+examples/ex3_rasterizer.cpp.s:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.s
+.PHONY : examples/ex3_rasterizer.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -285,6 +312,33 @@ src/rasterizer.cpp.s:
 	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/rasterizer.cpp.s
 .PHONY : src/rasterizer.cpp.s
 
+src/shader.o: src/shader.cpp.o
+
+.PHONY : src/shader.o
+
+# target to build an object file
+src/shader.cpp.o:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/shader.cpp.o
+.PHONY : src/shader.cpp.o
+
+src/shader.i: src/shader.cpp.i
+
+.PHONY : src/shader.i
+
+# target to preprocess a source file
+src/shader.cpp.i:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/shader.cpp.i
+.PHONY : src/shader.cpp.i
+
+src/shader.s: src/shader.cpp.s
+
+.PHONY : src/shader.s
+
+# target to generate assembly for a file
+src/shader.cpp.s:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/shader.cpp.s
+.PHONY : src/shader.cpp.s
+
 src/tgaimage.o: src/tgaimage.cpp.o
 
 .PHONY : src/tgaimage.o
@@ -381,6 +435,9 @@ help:
 	@echo "... examples/ex2_draw_triangles.o"
 	@echo "... examples/ex2_draw_triangles.i"
 	@echo "... examples/ex2_draw_triangles.s"
+	@echo "... examples/ex3_rasterizer.o"
+	@echo "... examples/ex3_rasterizer.i"
+	@echo "... examples/ex3_rasterizer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -393,6 +450,9 @@ help:
 	@echo "... src/rasterizer.o"
 	@echo "... src/rasterizer.i"
 	@echo "... src/rasterizer.s"
+	@echo "... src/shader.o"
+	@echo "... src/shader.i"
+	@echo "... src/shader.s"
 	@echo "... src/tgaimage.o"
 	@echo "... src/tgaimage.i"
 	@echo "... src/tgaimage.s"

@@ -1254,9 +1254,29 @@ tgaimage.h
 string
 -
 
+../include/shader.h
+Eigen/Dense
+-
+obj_reader.h
+../include/obj_reader.h
+tgaimage.h
+../include/tgaimage.h
+string
+-
+
 ../include/tgaimage.h
 fstream
 -
+
+../include/triangle.h
+Eigen/Dense
+-
+vector
+-
+tgaimage.h
+../include/tgaimage.h
+obj_reader.h
+../include/obj_reader.h
 
 /Users/guodewen/Desktop/rasterizer/main.cpp
 Eigen/Dense
@@ -1267,10 +1287,14 @@ string
 -
 stdio.h
 -
-rasterizer.h
-/Users/guodewen/Desktop/rasterizer/rasterizer.h
-string
--
 sstream
 -
+rasterizer.h
+/Users/guodewen/Desktop/rasterizer/rasterizer.h
+triangle.h
+/Users/guodewen/Desktop/rasterizer/triangle.h
+shader.h
+/Users/guodewen/Desktop/rasterizer/shader.h
+obj_reader.h
+/Users/guodewen/Desktop/rasterizer/obj_reader.h
 

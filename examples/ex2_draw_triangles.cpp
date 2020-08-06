@@ -46,12 +46,22 @@ void draw_triangles::draw(bool perspective, bool anti_aliasing) {
                 screen_coords(j,2) = world_coords(2);
             }
         }
-        triangle(screen_coords, frame,
-                 TGAColor((obj.FaceNormal(i,2)+1.)*.5*255,
-                          (obj.FaceNormal(i,1)+1.)*.5*255,
-                          (obj.FaceNormal(i,0)+1.)*.5*255,
-                          255),
-                 zbuffer);
+        TGAColor vertices_color[3];
+        for(int j=0; j<3; ++j) {
+            vertices_color[j] = TGAColor(
+                (obj.VertexNormal(obj.Face(i,j),2)+1.)*.5*255,
+                (obj.VertexNormal(obj.Face(i,j),1)+1.)*.5*255,
+                (obj.VertexNormal(obj.Face(i,j),0)+1.)*.5*255,
+                255
+            );
+        }
+        triangle(screen_coords, frame, vertices_color, zbuffer);
+        // triangle(screen_coords, frame,
+        //          TGAColor((obj.FaceNormal(i,2)+1.)*.5*255, // #2 of i-th facenormal
+        //                   (obj.FaceNormal(i,1)+1.)*.5*255, // #1 of i-th facenormal
+        //                   (obj.FaceNormal(i,0)+1.)*.5*255, // #0 of i-th facenormal
+        //                   255),
+        //          zbuffer);
     }
     frame.flip_vertically();
     TGAImage frame_aa(resolutionX/2, resolutionY/2, TGAImage::RGB);
@@ -136,7 +146,7 @@ void draw_triangles::draw(Eigen::Vector3d light_dir, bool perspective, bool anti
                                     +frame.get(i*2, j*2+1).bgra[k]
                                     +frame.get(i*2+1, j*2).bgra[k]
                                     +frame.get(i*2+1, j*2+1).bgra[k])*.25;
-                // frame_aa.set(i,j,color);
+                frame_aa.set(i,j,color);
             }
         }
         // frame_aa.flip_vertically();
