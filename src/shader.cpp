@@ -1,10 +1,13 @@
 #include "shader.h"
-#include "transform.h"
-#include "triangle.h"
-#include <string>
-#include <Eigen/Dense>
-#include <iostream>
-shader::shader(std::string objective, Eigen::Vector3d rotation, Eigen::Vector3d translation, Eigen::Vector2i resolution, double intensity, TGAColor color, std::string save_dir, int light) {
+
+shader::shader(std::string objective,
+               Eigen::Vector3d rotation,
+               Eigen::Vector3d translation,
+               Eigen::Vector2i resolution,
+               double intensity,
+               TGAColor color,
+               std::string save_dir,
+               int light) {
     obj_file = objective;
     resolutionX = resolution(0);
     resolutionY = resolution(1);
@@ -15,7 +18,7 @@ shader::shader(std::string objective, Eigen::Vector3d rotation, Eigen::Vector3d 
     kd = color;
     l = light;
 }
-void shader::shading(bool perspective, bool anti_aliasing, bool pervertex, bool bg_white) {
+void shader::shading(bool anti_aliasing) {
     if(anti_aliasing) {
         resolutionX*=2;
         resolutionY*=2;
@@ -23,7 +26,7 @@ void shader::shading(bool perspective, bool anti_aliasing, bool pervertex, bool 
     objReader obj(obj_file.c_str());
     // display in 60% of the screen size
     obj.fit_screen(0.6, resolutionX, resolutionY);
-    Eigen::Vector3d light_dir = 3 * l * (obj.bbox_min + obj.bbox_size);
+    Eigen::Vector3d light_pos = 4 * l * (obj.bbox_min + obj.bbox_size);
     int marginX, marginY;
     marginX = (resolutionX - obj.bbox_size[0]) * 0.5;
     marginY = (resolutionY - obj.bbox_size[1]) * 0.5;
@@ -38,87 +41,61 @@ void shader::shading(bool perspective, bool anti_aliasing, bool pervertex, bool 
     obj.transform(T.transformation);
 
     int n = 0;
+    std::vector< std::vector< std::vector<double> > >
+        frame_buffer_msaa(
+            resolutionX,
+            std::vector< std::vector<double> >(
+                resolutionY,
+                std::vector<double>(3, 0.)
+            )
+        );
+    
     for(int i=0; i<obj.nFaces; ++i) {
         // Face# i
         Eigen::Matrix3d screen_coords(3,3);
-        Eigen::Vector3d world_coords;
+        Eigen::Matrix3d world_coords(3,3);
+        Eigen::Matrix3d vertices_normal(3,3);
         for(int j=0; j<3; ++j) {
-            world_coords = obj.Vertex.row(obj.Face(i, j));
-            // For each vertex in that face
-            double z = world_coords(2);
-            if(perspective) {
-                // formula from tinyrenderer
-                screen_coords(j,0) = world_coords(0)/(1. - z/c) + marginX;
-                screen_coords(j,1) = world_coords(1)/(1. - z/c) + marginY;
-                screen_coords(j,2) = world_coords(2)/(1. - z/c);
-            } else {
-                screen_coords(j,0) = world_coords(0) + marginX;
-                screen_coords(j,1) = world_coords(1) + marginY;
-                screen_coords(j,2) = world_coords(2);
-            }
+            world_coords.row(j) = obj.Vertex.row(obj.Face(i, j));
+            vertices_normal.row(j) = obj.VertexNormal.row(obj.Face(i, j));
+            // vertices_normal.row(j) = obj.FaceNormal.row(i);
         }
-        // Lambertian (Diffuse) Shading
-        // Ld = kd(I/r^2)max(0,n·l)
-        if(pervertex) {
-            TGAColor vertices_color[3];
-            for(int j=0; j<3; ++j) {
-                double r_square = (light_dir - world_coords).squaredNorm();
-                light_dir.normalized();
-                double m = fmax(0., obj.VertexNormal.row(obj.Face(i,j)).dot(light_dir));
-                double L_over_k = I / r_square * m;
-                vertices_color[j] = TGAColor(kd[0] * L_over_k,
-                                             kd[1] * L_over_k,
-                                             kd[2] * L_over_k,
-                                             255);
-            }
-            triangle(screen_coords, frame, vertices_color, zbuffer);
-        } else {
-            double r_square = (light_dir - world_coords).squaredNorm();
-            light_dir.normalized();
-            double m = fmax(0., obj.FaceNormal.row(i).dot(light_dir));
-            double L_over_k = I / r_square * m;
-            triangle(screen_coords, frame,
-                     TGAColor(kd[0] * L_over_k,
-                              kd[1] * L_over_k,
-                              kd[2] * L_over_k,
-                              255),
-                     zbuffer);
-        }
+
+        triangle(
+            world_coords,
+            frame,
+            vertices_normal,
+            l,
+            light_pos,
+            I,
+            kd,
+            zbuffer,
+            c,
+            marginX,
+            marginY,
+            frame_buffer_msaa);
     }
     frame.flip_vertically();
-
-    // white background
-    if(bg_white) {
-        for(int i=0; i<frame.get_height(); ++i) {
-            for(int j=0; j<frame.get_width(); ++j) {
-                if(frame.get(i,j).bgra[0]==0
-                   && frame.get(i,j).bgra[1]==0
-                   && frame.get(i,j).bgra[2]==0) {
-                        TGAColor color;
-                        for(int k=0; k<4; ++k)
-                            color.bgra[k] = 255;
-                        frame.set(i, j, color);
-                }
-            }
-        }
-    }
+    frame.write_tga_file(dir.c_str());
 
     TGAImage frame_aa(resolutionX/2, resolutionY/2, TGAImage::RGB);
     if(anti_aliasing) {
         for(int i=0; i<resolutionX/2; ++i) {
             for(int j=0; j<resolutionY/2; ++j) {
                 TGAColor color;
-                for(int k=0; k<4; ++k)
-                    color.bgra[k] = (frame.get(i*2, j*2).bgra[k]
-                                    +frame.get(i*2, j*2+1).bgra[k]
-                                    +frame.get(i*2+1, j*2).bgra[k]
-                                    +frame.get(i*2+1, j*2+1).bgra[k])*.25;
-                frame_aa.set(i,j,color);
+                for(int k=0; k<3; ++k) {
+                    color.bgra[k] = (frame_buffer_msaa[i*2][j*2][k]
+                                    +frame_buffer_msaa[i*2][j*2+1][k]
+                                    +frame_buffer_msaa[i*2+1][j*2][k]
+                                    +frame_buffer_msaa[i*2+1][j*2+1][k])*.25;
+                }
+                color.bgra[3] = 255;
+                frame_aa.set(i, j, color);
             }
         }
-    }
-    if(anti_aliasing)
+        frame_aa.flip_vertically();
         frame_aa.write_tga_file(dir.c_str());
-    else
-        frame.write_tga_file(dir.c_str());
+        return;
+    }
+    frame.write_tga_file(dir.c_str());
 }

@@ -2,10 +2,10 @@
 #include <iostream>
 #include <string>
 #include <stdio.h>
-#include "rasterizer.h"
+#include "normal_rasterizer.h"
 #include "examples/ex3_rasterizer.h"
-#define resX 500
-#define resY 500
+#define resX 1000
+#define resY 1000
 void rasterizer_example() {
     rasterizer r("../data/bunny.obj",
                 Eigen::Vector3d(-25,45,0),   //rotation
@@ -14,9 +14,9 @@ void rasterizer_example() {
                 "../output/rasterizer.tga");
     r.rasterize(true, true, true, true);
 
-    for(int i=0; i<720; i+=10) {
+    for(int i=0; i<360; i+=10) {
         std::stringstream ss;
-        ss << "../output/rasterizer_white/";
+        ss << "../output/rasterizer_phong/";
         ss << i;
         ss << ".tga";
         std::string save_dir;
@@ -26,10 +26,9 @@ void rasterizer_example() {
                      Eigen::Vector3d::Zero(),    //translation
                      Eigen::Vector2i(resX, resY),
                      save_dir);
-        if(i<=360) r.rasterize(true, true, false, true);
-        else r.rasterize(true, true, true, true);
+        r.rasterize(true, true, true, false);
         // cd to "../output/rasterizer/", run the following script to make your own gif
         // ffmpeg -f image2 -i %d0.tga bunny.gif
-        // ffmpeg -f image2 -i ../output/rasterizer_white/%d0.tga ../output/rasterizer_white/bunny.gif
+        // ffmpeg -f image2 -i ../output/rasterizer_phong/%d0.tga ../output/rasterizer_phong/bunny.gif
     }
 }

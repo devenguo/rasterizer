@@ -60,145 +60,184 @@ include CMakeFiles/rasterizer.dir/flags.make
 CMakeFiles/rasterizer.dir/main.cpp.o: CMakeFiles/rasterizer.dir/flags.make
 CMakeFiles/rasterizer.dir/main.cpp.o: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rasterizer.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/main.cpp.o -c /Users/guodewen/Desktop/rasterizer/main.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/main.cpp.o -c /Users/guodewen/Desktop/rasterizer/main.cpp
 
 CMakeFiles/rasterizer.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/main.cpp > CMakeFiles/rasterizer.dir/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/main.cpp > CMakeFiles/rasterizer.dir/main.cpp.i
 
 CMakeFiles/rasterizer.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/main.cpp -o CMakeFiles/rasterizer.dir/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/main.cpp -o CMakeFiles/rasterizer.dir/main.cpp.s
 
 CMakeFiles/rasterizer.dir/src/line.cpp.o: CMakeFiles/rasterizer.dir/flags.make
 CMakeFiles/rasterizer.dir/src/line.cpp.o: ../src/line.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rasterizer.dir/src/line.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/line.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/line.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/line.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/line.cpp
 
 CMakeFiles/rasterizer.dir/src/line.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/src/line.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/line.cpp > CMakeFiles/rasterizer.dir/src/line.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/line.cpp > CMakeFiles/rasterizer.dir/src/line.cpp.i
 
 CMakeFiles/rasterizer.dir/src/line.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/src/line.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/line.cpp -o CMakeFiles/rasterizer.dir/src/line.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/line.cpp -o CMakeFiles/rasterizer.dir/src/line.cpp.s
 
 CMakeFiles/rasterizer.dir/src/tgaimage.cpp.o: CMakeFiles/rasterizer.dir/flags.make
 CMakeFiles/rasterizer.dir/src/tgaimage.cpp.o: ../src/tgaimage.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rasterizer.dir/src/tgaimage.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/tgaimage.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/tgaimage.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/tgaimage.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/tgaimage.cpp
 
 CMakeFiles/rasterizer.dir/src/tgaimage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/src/tgaimage.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/tgaimage.cpp > CMakeFiles/rasterizer.dir/src/tgaimage.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/tgaimage.cpp > CMakeFiles/rasterizer.dir/src/tgaimage.cpp.i
 
 CMakeFiles/rasterizer.dir/src/tgaimage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/src/tgaimage.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/tgaimage.cpp -o CMakeFiles/rasterizer.dir/src/tgaimage.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/tgaimage.cpp -o CMakeFiles/rasterizer.dir/src/tgaimage.cpp.s
 
 CMakeFiles/rasterizer.dir/src/obj_reader.cpp.o: CMakeFiles/rasterizer.dir/flags.make
 CMakeFiles/rasterizer.dir/src/obj_reader.cpp.o: ../src/obj_reader.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rasterizer.dir/src/obj_reader.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/obj_reader.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/obj_reader.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/obj_reader.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/obj_reader.cpp
 
 CMakeFiles/rasterizer.dir/src/obj_reader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/src/obj_reader.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/obj_reader.cpp > CMakeFiles/rasterizer.dir/src/obj_reader.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/obj_reader.cpp > CMakeFiles/rasterizer.dir/src/obj_reader.cpp.i
 
 CMakeFiles/rasterizer.dir/src/obj_reader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/src/obj_reader.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/obj_reader.cpp -o CMakeFiles/rasterizer.dir/src/obj_reader.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/obj_reader.cpp -o CMakeFiles/rasterizer.dir/src/obj_reader.cpp.s
 
 CMakeFiles/rasterizer.dir/src/triangle.cpp.o: CMakeFiles/rasterizer.dir/flags.make
 CMakeFiles/rasterizer.dir/src/triangle.cpp.o: ../src/triangle.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rasterizer.dir/src/triangle.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/triangle.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/triangle.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/triangle.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/triangle.cpp
 
 CMakeFiles/rasterizer.dir/src/triangle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/src/triangle.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/triangle.cpp > CMakeFiles/rasterizer.dir/src/triangle.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/triangle.cpp > CMakeFiles/rasterizer.dir/src/triangle.cpp.i
 
 CMakeFiles/rasterizer.dir/src/triangle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/src/triangle.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/triangle.cpp -o CMakeFiles/rasterizer.dir/src/triangle.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/triangle.cpp -o CMakeFiles/rasterizer.dir/src/triangle.cpp.s
 
 CMakeFiles/rasterizer.dir/src/transform.cpp.o: CMakeFiles/rasterizer.dir/flags.make
 CMakeFiles/rasterizer.dir/src/transform.cpp.o: ../src/transform.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rasterizer.dir/src/transform.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/transform.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/transform.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/transform.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/transform.cpp
 
 CMakeFiles/rasterizer.dir/src/transform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/src/transform.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/transform.cpp > CMakeFiles/rasterizer.dir/src/transform.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/transform.cpp > CMakeFiles/rasterizer.dir/src/transform.cpp.i
 
 CMakeFiles/rasterizer.dir/src/transform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/src/transform.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/transform.cpp -o CMakeFiles/rasterizer.dir/src/transform.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/transform.cpp -o CMakeFiles/rasterizer.dir/src/transform.cpp.s
 
-CMakeFiles/rasterizer.dir/src/rasterizer.cpp.o: CMakeFiles/rasterizer.dir/flags.make
-CMakeFiles/rasterizer.dir/src/rasterizer.cpp.o: ../src/rasterizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/rasterizer.dir/src/rasterizer.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/rasterizer.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/rasterizer.cpp
+CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.o: CMakeFiles/rasterizer.dir/flags.make
+CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.o: ../src/normal_rasterizer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/normal_rasterizer.cpp
 
-CMakeFiles/rasterizer.dir/src/rasterizer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/src/rasterizer.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/rasterizer.cpp > CMakeFiles/rasterizer.dir/src/rasterizer.cpp.i
+CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/normal_rasterizer.cpp > CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.i
 
-CMakeFiles/rasterizer.dir/src/rasterizer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/src/rasterizer.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/rasterizer.cpp -o CMakeFiles/rasterizer.dir/src/rasterizer.cpp.s
+CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/normal_rasterizer.cpp -o CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.s
+
+CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.o: CMakeFiles/rasterizer.dir/flags.make
+CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.o: ../src/triangle_shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/triangle_shader.cpp
+
+CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/triangle_shader.cpp > CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.i
+
+CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/triangle_shader.cpp -o CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.s
+
+CMakeFiles/rasterizer.dir/src/camera.cpp.o: CMakeFiles/rasterizer.dir/flags.make
+CMakeFiles/rasterizer.dir/src/camera.cpp.o: ../src/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/rasterizer.dir/src/camera.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/camera.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/camera.cpp
+
+CMakeFiles/rasterizer.dir/src/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/src/camera.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/camera.cpp > CMakeFiles/rasterizer.dir/src/camera.cpp.i
+
+CMakeFiles/rasterizer.dir/src/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/src/camera.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/camera.cpp -o CMakeFiles/rasterizer.dir/src/camera.cpp.s
 
 CMakeFiles/rasterizer.dir/src/shader.cpp.o: CMakeFiles/rasterizer.dir/flags.make
 CMakeFiles/rasterizer.dir/src/shader.cpp.o: ../src/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/rasterizer.dir/src/shader.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/shader.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/rasterizer.dir/src/shader.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/src/shader.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/shader.cpp
 
 CMakeFiles/rasterizer.dir/src/shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/src/shader.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/shader.cpp > CMakeFiles/rasterizer.dir/src/shader.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/src/shader.cpp > CMakeFiles/rasterizer.dir/src/shader.cpp.i
 
 CMakeFiles/rasterizer.dir/src/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/src/shader.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/shader.cpp -o CMakeFiles/rasterizer.dir/src/shader.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/src/shader.cpp -o CMakeFiles/rasterizer.dir/src/shader.cpp.s
 
 CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.o: CMakeFiles/rasterizer.dir/flags.make
 CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.o: ../examples/ex1_draw_lines.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex1_draw_lines.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex1_draw_lines.cpp
 
 CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/examples/ex1_draw_lines.cpp > CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/examples/ex1_draw_lines.cpp > CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.i
 
 CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/examples/ex1_draw_lines.cpp -o CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/examples/ex1_draw_lines.cpp -o CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.s
 
 CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o: CMakeFiles/rasterizer.dir/flags.make
 CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o: ../examples/ex2_draw_triangles.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex2_draw_triangles.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex2_draw_triangles.cpp
 
 CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/examples/ex2_draw_triangles.cpp > CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/examples/ex2_draw_triangles.cpp > CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.i
 
 CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/examples/ex2_draw_triangles.cpp -o CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/examples/ex2_draw_triangles.cpp -o CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.s
 
 CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o: CMakeFiles/rasterizer.dir/flags.make
 CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o: ../examples/ex3_rasterizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex3_rasterizer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex3_rasterizer.cpp
 
 CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/examples/ex3_rasterizer.cpp > CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/examples/ex3_rasterizer.cpp > CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.i
 
 CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/examples/ex3_rasterizer.cpp -o CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/examples/ex3_rasterizer.cpp -o CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.s
+
+CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.o: CMakeFiles/rasterizer.dir/flags.make
+CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.o: ../examples/ex4_shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex4_shader.cpp
+
+CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/guodewen/Desktop/rasterizer/examples/ex4_shader.cpp > CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.i
+
+CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/guodewen/Desktop/rasterizer/examples/ex4_shader.cpp -o CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.s
 
 # Object files for target rasterizer
 rasterizer_OBJECTS = \
@@ -208,11 +247,14 @@ rasterizer_OBJECTS = \
 "CMakeFiles/rasterizer.dir/src/obj_reader.cpp.o" \
 "CMakeFiles/rasterizer.dir/src/triangle.cpp.o" \
 "CMakeFiles/rasterizer.dir/src/transform.cpp.o" \
-"CMakeFiles/rasterizer.dir/src/rasterizer.cpp.o" \
+"CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.o" \
+"CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.o" \
+"CMakeFiles/rasterizer.dir/src/camera.cpp.o" \
 "CMakeFiles/rasterizer.dir/src/shader.cpp.o" \
 "CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.o" \
 "CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o" \
-"CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o"
+"CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o" \
+"CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.o"
 
 # External object files for target rasterizer
 rasterizer_EXTERNAL_OBJECTS =
@@ -223,14 +265,17 @@ rasterizer: CMakeFiles/rasterizer.dir/src/tgaimage.cpp.o
 rasterizer: CMakeFiles/rasterizer.dir/src/obj_reader.cpp.o
 rasterizer: CMakeFiles/rasterizer.dir/src/triangle.cpp.o
 rasterizer: CMakeFiles/rasterizer.dir/src/transform.cpp.o
-rasterizer: CMakeFiles/rasterizer.dir/src/rasterizer.cpp.o
+rasterizer: CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.o
+rasterizer: CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.o
+rasterizer: CMakeFiles/rasterizer.dir/src/camera.cpp.o
 rasterizer: CMakeFiles/rasterizer.dir/src/shader.cpp.o
 rasterizer: CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.o
 rasterizer: CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o
 rasterizer: CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o
+rasterizer: CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.o
 rasterizer: CMakeFiles/rasterizer.dir/build.make
 rasterizer: CMakeFiles/rasterizer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable rasterizer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/guodewen/Desktop/rasterizer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable rasterizer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rasterizer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

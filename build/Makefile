@@ -204,6 +204,33 @@ examples/ex3_rasterizer.cpp.s:
 	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.s
 .PHONY : examples/ex3_rasterizer.cpp.s
 
+examples/ex4_shader.o: examples/ex4_shader.cpp.o
+
+.PHONY : examples/ex4_shader.o
+
+# target to build an object file
+examples/ex4_shader.cpp.o:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.o
+.PHONY : examples/ex4_shader.cpp.o
+
+examples/ex4_shader.i: examples/ex4_shader.cpp.i
+
+.PHONY : examples/ex4_shader.i
+
+# target to preprocess a source file
+examples/ex4_shader.cpp.i:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.i
+.PHONY : examples/ex4_shader.cpp.i
+
+examples/ex4_shader.s: examples/ex4_shader.cpp.s
+
+.PHONY : examples/ex4_shader.s
+
+# target to generate assembly for a file
+examples/ex4_shader.cpp.s:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.s
+.PHONY : examples/ex4_shader.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -230,6 +257,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+src/camera.o: src/camera.cpp.o
+
+.PHONY : src/camera.o
+
+# target to build an object file
+src/camera.cpp.o:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/camera.cpp.o
+.PHONY : src/camera.cpp.o
+
+src/camera.i: src/camera.cpp.i
+
+.PHONY : src/camera.i
+
+# target to preprocess a source file
+src/camera.cpp.i:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/camera.cpp.i
+.PHONY : src/camera.cpp.i
+
+src/camera.s: src/camera.cpp.s
+
+.PHONY : src/camera.s
+
+# target to generate assembly for a file
+src/camera.cpp.s:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/camera.cpp.s
+.PHONY : src/camera.cpp.s
 
 src/line.o: src/line.cpp.o
 
@@ -258,6 +312,33 @@ src/line.cpp.s:
 	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/line.cpp.s
 .PHONY : src/line.cpp.s
 
+src/normal_rasterizer.o: src/normal_rasterizer.cpp.o
+
+.PHONY : src/normal_rasterizer.o
+
+# target to build an object file
+src/normal_rasterizer.cpp.o:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.o
+.PHONY : src/normal_rasterizer.cpp.o
+
+src/normal_rasterizer.i: src/normal_rasterizer.cpp.i
+
+.PHONY : src/normal_rasterizer.i
+
+# target to preprocess a source file
+src/normal_rasterizer.cpp.i:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.i
+.PHONY : src/normal_rasterizer.cpp.i
+
+src/normal_rasterizer.s: src/normal_rasterizer.cpp.s
+
+.PHONY : src/normal_rasterizer.s
+
+# target to generate assembly for a file
+src/normal_rasterizer.cpp.s:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.s
+.PHONY : src/normal_rasterizer.cpp.s
+
 src/obj_reader.o: src/obj_reader.cpp.o
 
 .PHONY : src/obj_reader.o
@@ -284,33 +365,6 @@ src/obj_reader.s: src/obj_reader.cpp.s
 src/obj_reader.cpp.s:
 	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/obj_reader.cpp.s
 .PHONY : src/obj_reader.cpp.s
-
-src/rasterizer.o: src/rasterizer.cpp.o
-
-.PHONY : src/rasterizer.o
-
-# target to build an object file
-src/rasterizer.cpp.o:
-	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/rasterizer.cpp.o
-.PHONY : src/rasterizer.cpp.o
-
-src/rasterizer.i: src/rasterizer.cpp.i
-
-.PHONY : src/rasterizer.i
-
-# target to preprocess a source file
-src/rasterizer.cpp.i:
-	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/rasterizer.cpp.i
-.PHONY : src/rasterizer.cpp.i
-
-src/rasterizer.s: src/rasterizer.cpp.s
-
-.PHONY : src/rasterizer.s
-
-# target to generate assembly for a file
-src/rasterizer.cpp.s:
-	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/rasterizer.cpp.s
-.PHONY : src/rasterizer.cpp.s
 
 src/shader.o: src/shader.cpp.o
 
@@ -420,6 +474,33 @@ src/triangle.cpp.s:
 	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/triangle.cpp.s
 .PHONY : src/triangle.cpp.s
 
+src/triangle_shader.o: src/triangle_shader.cpp.o
+
+.PHONY : src/triangle_shader.o
+
+# target to build an object file
+src/triangle_shader.cpp.o:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.o
+.PHONY : src/triangle_shader.cpp.o
+
+src/triangle_shader.i: src/triangle_shader.cpp.i
+
+.PHONY : src/triangle_shader.i
+
+# target to preprocess a source file
+src/triangle_shader.cpp.i:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.i
+.PHONY : src/triangle_shader.cpp.i
+
+src/triangle_shader.s: src/triangle_shader.cpp.s
+
+.PHONY : src/triangle_shader.s
+
+# target to generate assembly for a file
+src/triangle_shader.cpp.s:
+	$(MAKE) -f CMakeFiles/rasterizer.dir/build.make CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.s
+.PHONY : src/triangle_shader.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -438,18 +519,24 @@ help:
 	@echo "... examples/ex3_rasterizer.o"
 	@echo "... examples/ex3_rasterizer.i"
 	@echo "... examples/ex3_rasterizer.s"
+	@echo "... examples/ex4_shader.o"
+	@echo "... examples/ex4_shader.i"
+	@echo "... examples/ex4_shader.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/camera.o"
+	@echo "... src/camera.i"
+	@echo "... src/camera.s"
 	@echo "... src/line.o"
 	@echo "... src/line.i"
 	@echo "... src/line.s"
+	@echo "... src/normal_rasterizer.o"
+	@echo "... src/normal_rasterizer.i"
+	@echo "... src/normal_rasterizer.s"
 	@echo "... src/obj_reader.o"
 	@echo "... src/obj_reader.i"
 	@echo "... src/obj_reader.s"
-	@echo "... src/rasterizer.o"
-	@echo "... src/rasterizer.i"
-	@echo "... src/rasterizer.s"
 	@echo "... src/shader.o"
 	@echo "... src/shader.i"
 	@echo "... src/shader.s"
@@ -462,6 +549,9 @@ help:
 	@echo "... src/triangle.o"
 	@echo "... src/triangle.i"
 	@echo "... src/triangle.s"
+	@echo "... src/triangle_shader.o"
+	@echo "... src/triangle_shader.i"
+	@echo "... src/triangle_shader.s"
 .PHONY : help
 
 

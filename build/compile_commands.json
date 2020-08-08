@@ -1,57 +1,72 @@
 [
 {
   "directory": "/Users/guodewen/Desktop/rasterizer/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/main.cpp.o -c /Users/guodewen/Desktop/rasterizer/main.cpp",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/main.cpp.o -c /Users/guodewen/Desktop/rasterizer/main.cpp",
   "file": "/Users/guodewen/Desktop/rasterizer/main.cpp"
 },
 {
   "directory": "/Users/guodewen/Desktop/rasterizer/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/line.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/line.cpp",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/line.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/line.cpp",
   "file": "/Users/guodewen/Desktop/rasterizer/src/line.cpp"
 },
 {
   "directory": "/Users/guodewen/Desktop/rasterizer/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/tgaimage.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/tgaimage.cpp",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/tgaimage.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/tgaimage.cpp",
   "file": "/Users/guodewen/Desktop/rasterizer/src/tgaimage.cpp"
 },
 {
   "directory": "/Users/guodewen/Desktop/rasterizer/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/obj_reader.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/obj_reader.cpp",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/obj_reader.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/obj_reader.cpp",
   "file": "/Users/guodewen/Desktop/rasterizer/src/obj_reader.cpp"
 },
 {
   "directory": "/Users/guodewen/Desktop/rasterizer/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/triangle.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/triangle.cpp",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/triangle.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/triangle.cpp",
   "file": "/Users/guodewen/Desktop/rasterizer/src/triangle.cpp"
 },
 {
   "directory": "/Users/guodewen/Desktop/rasterizer/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/transform.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/transform.cpp",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/transform.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/transform.cpp",
   "file": "/Users/guodewen/Desktop/rasterizer/src/transform.cpp"
 },
 {
   "directory": "/Users/guodewen/Desktop/rasterizer/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/rasterizer.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/rasterizer.cpp",
-  "file": "/Users/guodewen/Desktop/rasterizer/src/rasterizer.cpp"
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/normal_rasterizer.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/normal_rasterizer.cpp",
+  "file": "/Users/guodewen/Desktop/rasterizer/src/normal_rasterizer.cpp"
 },
 {
   "directory": "/Users/guodewen/Desktop/rasterizer/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/shader.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/shader.cpp",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/triangle_shader.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/triangle_shader.cpp",
+  "file": "/Users/guodewen/Desktop/rasterizer/src/triangle_shader.cpp"
+},
+{
+  "directory": "/Users/guodewen/Desktop/rasterizer/build",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/camera.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/camera.cpp",
+  "file": "/Users/guodewen/Desktop/rasterizer/src/camera.cpp"
+},
+{
+  "directory": "/Users/guodewen/Desktop/rasterizer/build",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/src/shader.cpp.o -c /Users/guodewen/Desktop/rasterizer/src/shader.cpp",
   "file": "/Users/guodewen/Desktop/rasterizer/src/shader.cpp"
 },
 {
   "directory": "/Users/guodewen/Desktop/rasterizer/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex1_draw_lines.cpp",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/examples/ex1_draw_lines.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex1_draw_lines.cpp",
   "file": "/Users/guodewen/Desktop/rasterizer/examples/ex1_draw_lines.cpp"
 },
 {
   "directory": "/Users/guodewen/Desktop/rasterizer/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex2_draw_triangles.cpp",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/examples/ex2_draw_triangles.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex2_draw_triangles.cpp",
   "file": "/Users/guodewen/Desktop/rasterizer/examples/ex2_draw_triangles.cpp"
 },
 {
   "directory": "/Users/guodewen/Desktop/rasterizer/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex3_rasterizer.cpp",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/examples/ex3_rasterizer.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex3_rasterizer.cpp",
   "file": "/Users/guodewen/Desktop/rasterizer/examples/ex3_rasterizer.cpp"
+},
+{
+  "directory": "/Users/guodewen/Desktop/rasterizer/build",
+  "command": "/usr/bin/clang++   -I/Users/guodewen/Desktop/rasterizer/external/eigen -I/Users/guodewen/Desktop/rasterizer/include  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -o CMakeFiles/rasterizer.dir/examples/ex4_shader.cpp.o -c /Users/guodewen/Desktop/rasterizer/examples/ex4_shader.cpp",
+  "file": "/Users/guodewen/Desktop/rasterizer/examples/ex4_shader.cpp"
 }
 ]

@@ -15,9 +15,12 @@ set(SRCS main.cpp
     ${PROJECT_SOURCE_DIR}/src/obj_reader.cpp
     ${PROJECT_SOURCE_DIR}/src/triangle.cpp
     ${PROJECT_SOURCE_DIR}/src/transform.cpp
-    ${PROJECT_SOURCE_DIR}/src/rasterizer.cpp
+    ${PROJECT_SOURCE_DIR}/src/normal_rasterizer.cpp
+    ${PROJECT_SOURCE_DIR}/src/triangle_shader.cpp
+    ${PROJECT_SOURCE_DIR}/src/camera.cpp
     ${PROJECT_SOURCE_DIR}/src/shader.cpp
     ${PROJECT_SOURCE_DIR}/examples/ex1_draw_lines.cpp
     ${PROJECT_SOURCE_DIR}/examples/ex2_draw_triangles.cpp
-    ${PROJECT_SOURCE_DIR}/examples/ex3_rasterizer.cpp)
+    ${PROJECT_SOURCE_DIR}/examples/ex3_rasterizer.cpp
+    ${PROJECT_SOURCE_DIR}/examples/ex4_shader.cpp)
 add_executable(rasterizer ${SRCS})

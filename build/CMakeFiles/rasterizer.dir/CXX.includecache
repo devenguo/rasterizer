@@ -1236,6 +1236,12 @@ IndexedViewMethods.h
 ReshapedMethods.h
 ../external/eigen/Eigen/src/plugins/ReshapedMethods.h
 
+../include/examples/ex2_draw_triangles.h
+triangle.h
+../include/examples/triangle.h
+
+../include/examples/ex3_rasterizer.h
+
 ../include/obj_reader.h
 Eigen/Dense
 -
@@ -1244,28 +1250,28 @@ string
 vector
 -
 
-../include/rasterizer.h
-Eigen/Dense
--
-obj_reader.h
-../include/obj_reader.h
-tgaimage.h
-../include/tgaimage.h
-string
--
-
 ../include/shader.h
-Eigen/Dense
--
 obj_reader.h
 ../include/obj_reader.h
 tgaimage.h
 ../include/tgaimage.h
+transform.h
+../include/transform.h
+triangle.h
+../include/triangle.h
 string
+-
+Eigen/Dense
+-
+iostream
 -
 
 ../include/tgaimage.h
 fstream
+-
+
+../include/transform.h
+Eigen/Dense
 -
 
 ../include/triangle.h
@@ -1279,22 +1285,16 @@ obj_reader.h
 ../include/obj_reader.h
 
 /Users/guodewen/Desktop/rasterizer/main.cpp
+shader.h
+/Users/guodewen/Desktop/rasterizer/shader.h
+tgaimage.h
+/Users/guodewen/Desktop/rasterizer/tgaimage.h
 Eigen/Dense
--
-iostream
--
-string
--
-stdio.h
 -
 sstream
 -
-rasterizer.h
-/Users/guodewen/Desktop/rasterizer/rasterizer.h
-triangle.h
-/Users/guodewen/Desktop/rasterizer/triangle.h
-shader.h
-/Users/guodewen/Desktop/rasterizer/shader.h
-obj_reader.h
-/Users/guodewen/Desktop/rasterizer/obj_reader.h
+examples/ex2_draw_triangles.h
+-
+examples/ex3_rasterizer.h
+-
 

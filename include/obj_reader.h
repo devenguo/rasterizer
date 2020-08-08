@@ -5,7 +5,7 @@
 #include <vector>
 class objReader{
 protected:
-    void __update_face_normal();
+    void __update_normal();
 public:
     // objReader();
     objReader(std::string filename);

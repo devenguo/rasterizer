@@ -82,26 +82,28 @@ objReader::objReader(std::string filename) {
     bbox_size = bbox_max - bbox_min;
 
     // face normal setup
-    __update_face_normal();
+    __update_normal();
 
-    VertexNeighborFace.resize(nVertices);
-    for(int i=0; i<nFaces; ++i) {
-        for(int j=0; j<3; ++j)
-            VertexNeighborFace[Face(i,j)].push_back(i);
-    }
+    // VertexNeighborFace.resize(nVertices);
+    // for(int i=0; i<nFaces; ++i) {
+    //     for(int j=0; j<3; ++j)
+    //         VertexNeighborFace[Face(i,j)].push_back(i);
+    // }
 
-    VertexNormal.resize(nVertices, 3);
-    for(int i=0; i<nVertices; ++i) {
-        VertexNormal.row(i) = Eigen::Vector3d::Zero();
-        for(int j=0; j<VertexNeighborFace[i].size(); ++j) {
-            int face_idx = VertexNeighborFace[i][j];
-            Eigen::Vector3d a = Vertex.row(Face(face_idx,1))-Vertex.row(Face(face_idx,0));
-            Eigen::Vector3d b = Vertex.row(Face(face_idx,2))-Vertex.row(Face(face_idx,0));
-            double area = a.cross(b).squaredNorm();
-            VertexNormal.row(i) += FaceNormal.row(face_idx) * area;
-        }
-    }
-    VertexNormal.rowwise().normalize();
+    // VertexNormal.resize(nVertices, 3);
+    // for(int i=0; i<nVertices; ++i) {
+    //     VertexNormal.row(i) = Eigen::Vector3d::Zero();
+    //     for(int j=0; j<VertexNeighborFace[i].size(); ++j) {
+    //         int face_idx = VertexNeighborFace[i][j];
+    //         Eigen::Vector3d a = Vertex.row(Face(face_idx,1))-Vertex.row(Face(face_idx,0));
+    //         Eigen::Vector3d b = Vertex.row(Face(face_idx,2))-Vertex.row(Face(face_idx,0));
+    //         double area = a.cross(b).squaredNorm();
+    //         VertexNormal.row(i) += FaceNormal.row(face_idx) * area;
+    //     }
+    // }
+    // VertexNormal.rowwise().normalize();
+    // for(int i=0; i<nVertices; ++i)
+    //     std::cout << VertexNormal.row(i).norm() << std::endl;
 
     // std::ofstream vertex_neighbor("../output/vertex_neighbor.txt");
     // for(int i=0; i<nVertices; ++i) {
@@ -134,10 +136,10 @@ void objReader::fit_screen(double ratio, int resX, int resY) {
     // bbox_min *= scale;
     // bbox_max *= scale;
     // bbox_size *= scale;
-    // __update_face_normal();
+    // __update_normal();
 }
 
-void objReader::__update_face_normal() {
+void objReader::__update_normal() {
     FaceNormal.resize(nFaces, 3);
     for(int i=0; i<nFaces; ++i) {
         Eigen::Vector3d v0, v1, normal;
@@ -146,6 +148,25 @@ void objReader::__update_face_normal() {
         normal = v0.cross(v1).normalized();
         for(int j=0; j<3; ++j) FaceNormal(i,j) = normal(j);
     }
+
+    VertexNeighborFace.resize(nVertices);
+    for(int i=0; i<nFaces; ++i) {
+        for(int j=0; j<3; ++j)
+            VertexNeighborFace[Face(i,j)].push_back(i);
+    }
+
+    VertexNormal.resize(nVertices, 3);
+    for(int i=0; i<nVertices; ++i) {
+        VertexNormal.row(i) = Eigen::Vector3d::Zero();
+        for(int j=0; j<VertexNeighborFace[i].size(); ++j) {
+            int face_idx = VertexNeighborFace[i][j];
+            Eigen::Vector3d a = Vertex.row(Face(face_idx,1))-Vertex.row(Face(face_idx,0));
+            Eigen::Vector3d b = Vertex.row(Face(face_idx,2))-Vertex.row(Face(face_idx,0));
+            double area = a.cross(b).squaredNorm();
+            VertexNormal.row(i) += FaceNormal.row(face_idx) * area;
+        }
+    }
+    VertexNormal.rowwise().normalize();
 }
 
 void objReader::transform(Eigen::Matrix4d T) {
@@ -158,5 +179,5 @@ void objReader::transform(Eigen::Matrix4d T) {
     bbox_min = Vertex.colwise().minCoeff();
     bbox_max = Vertex.colwise().maxCoeff();
     bbox_size = bbox_max - bbox_min;
-    __update_face_normal();
+    __update_normal();
 }

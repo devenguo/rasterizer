@@ -12,7 +12,7 @@ void draw_triangles::draw(bool perspective, bool anti_aliasing) {
         resolutionY*=2;
     }
     objReader obj("../data/bunny.obj");
-    obj.fit_screen(0.6, resolutionX, resolutionY);
+    obj.fit_screen(0.7, resolutionX, resolutionY);
     int marginX, marginY;
     marginX = (resolutionX - obj.bbox_size[0]) * 0.5;
     marginY = (resolutionY - obj.bbox_size[1]) * 0.5;
@@ -21,11 +21,11 @@ void draw_triangles::draw(bool perspective, bool anti_aliasing) {
     float *zbuffer = new float[resolutionX*resolutionY];
     for(int i=resolutionX*resolutionY; i--; zbuffer[i] = -std::numeric_limits<float>::max());
     
-    double c = 20*obj.bbox_size(2);
+    double c = 10*obj.bbox_size(2);
     // std::cout << c << std::endl << obj.bbox_max << obj.bbox_min << std::endl;
 
     Eigen::Vector3d r, t;
-    r << -25, 45, 0; t << 0, 0, 0;
+    r << 25, -25, 0; t << 0, 0, 0;
     transform T(r, t);
     obj.transform(T.transformation);
 
